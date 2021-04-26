@@ -674,11 +674,40 @@ export function getOptionParser() {
     // .option('no-replace', noReplaceOpt);
 
   parser.command('dots')
-    .describe('')
-    .option('field', {
-      describe: 'field containing number of dots'
+    .describe('fill polygons with dots of one or more colors')
+    .option('fields', {
+      DEFAULT: true,
+      describe: 'one or more fields containing numbers of dots',
+      type: 'strings'
     })
-    .option('target', targetOpt);
+    .option('colors', {
+      describe: 'one or more colors',
+      type: 'strings'
+    })
+    .option('r', {
+      describe: 'radius of each dot in pixels',
+      type: 'number'
+    })
+    .option('evenness', {
+      describe: '(0-1) dot spacing, from random to even (default is 1)',
+      type: 'number'
+    })
+    .option('per-dot', {
+      describe: 'number for scaling data values (e.g. 10 per dot)',
+      type: 'number'
+    })
+    .option('copy-fields', {
+      describe: 'list of fields to copy from polygons to dots',
+      type: 'strings'
+    })
+    .option('multipart', {
+      describe: 'combine groups of same-color dots into multi-part features',
+      type: 'flag'
+    })
+    .option('debug', {type: 'flag'})
+    .option('target', targetOpt)
+    .option('name', nameOpt)
+    .option('no-replace', noReplaceOpt);
 
   parser.command('drop')
     .describe('delete layer(s) or elements within the target layer(s)')
