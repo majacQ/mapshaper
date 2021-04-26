@@ -1,3 +1,23 @@
+v0.5.46
+* Fix for issue #476.
+
+
+v0.5.45
+* [web ui] Made layer names in the export dialog settable.
+* Tuned parameters in the -dots command.
+
+v0.5.44
+* Added "per-dot=" option to the -dots command, for setting the value-to-dot ratio. To represent 100 people per dot on a population map, you would use per-dot=100.
+* Added "copy-fields=" option to -dots, to copy one or more data fields from the original polygon layer to the generated dot features.
+* Added "multipart" option to -dots, which combines groups of same-color dots into multi-part features.
+
+v0.5.43
+* Improved evenness of dot placement.
+* Replaced "random" and "spacing=" options with a single "evenness=" option, which varies from 0 (random placement) to 1 (very even).
+
+v0.5.42
+* Added -dots command for making dot density maps.
+
 v0.5.41
 * Fixed error parsing .prj files for southern UTM zones.
 
