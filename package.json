@@ -41,8 +41,13 @@
 		"commander": "^5.1.0",
 		"cookies": "^0.8.0",
 		"d3-scale-chromatic": "^2.0.0",
+  <<<<<<< snyk-upgrade-2bf1c3cfea2de57e14cf8774ffa17e4a
+		"flatbush": "^3.2.1",
+		"iconv-lite": "0.6.2",
+  =======
 		"flatbush": "^3.3.0",
 		"iconv-lite": "0.4.24",
+  >>>>>>> master
 		"mproj": "0.0.27",
 		"opn": "^5.3.0",
 		"rw": "~1.3.3",
